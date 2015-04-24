@@ -1,27 +1,13 @@
 <?php
-	require_once("/../php/model/config.php"); //uses code from config.php
-	require_once("/../php/controller/login-verify.php");
+    // require a config.php file in the model folder
+    // have access to the variables int the config.php file
+    require_once(__DIR__ . "/../model/config.php");
+    
 ?>
-<div class="fluid-container">
-	<div class="row">
-		<div class="col-xs-12">
-			<nav>
-				<ul>
-				
-					<?php
-						if(!authenticateUser()){
-							echo"<li><a href=" . "/../login.php" . ">Login</a></li>";
-						}
-					
-						if(authenticateUser()){
-							echo "<li><a href=" . "/../logout.php" . ">Logout</a><li>";
-						}
-						if(!authenticateUser()){
-							echo "<li><a href=" . "/../register.php" . ">Register</a><li>";
-						}
-					?>
-				</ul>	
-			</nav>
-		</div>
-	</div>
-</div>
+<nav>
+    <ul>
+        <!-- create a link that point to the post file -->
+         <li class="button"><a href="<?php echo $path. "login.php" ?>">Log In</a></li>
+         <li class="button"><a href="<?php echo $path. "register.php" ?>">Register</a></li>
+    </ul>
+</nav>

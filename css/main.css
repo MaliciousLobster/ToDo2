@@ -1,10 +1,50 @@
 @import "reset.css";
 @import "normalize.css"; 
 
+
 body{
 	color: #999;
-	background: #f1f1f1;
+	background: #E6E6E6;
 	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+  max-width: 100%;
+  mask-image: linear-gradient(0deg, rgba(200, 200, 200, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(200, 200, 200, 0) 100%);
+    margin: 0px 0px 0px 0px;
+}
+
+nav ul {
+	margin: 40px;
+	width: 400px;
+	display: inline-block;
+  	text-align: center;
+  	background: rgba(255, 255, 255, 1);
+  	box-shadow: 2px 2px 0px #ddd;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 18px;
+  text-transform: uppercase;
+  color: black;
+  font-size: 22px;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: rgba(200, 200, 200, 0.3);
+  color: rgba(0, 35, 122, 0.7);
+}
+
+.add-new-task{
+	padding: 10px;
 }
 
 .wrap{
@@ -13,10 +53,32 @@ body{
 }
 
 .task-list{
-	width: 88%;
+	text-align: center;
+	display: inline-block;
+	width: 48%;
 	min-height: 300px;
 	background: #fff;
 	box-shadow: 2px 2px 0px #ddd;
 	margin-top: 40px;
 	padding: 22px 6%;
-} 
+}
+
+@media screen and (max-width: 375px){
+	.task-list{
+		width: 58%;
+	}
+
+	.add-new-task{
+		width: 58%;
+		display: inline-block;
+	}
+	nav ul {
+	margin: 40px;
+	width: 300px;
+	display: inline-block;
+  	text-align: center;
+  	background: rgba(255, 255, 255, 1);
+  	box-shadow: 2px 2px 0px #ddd;
+}
+
+}

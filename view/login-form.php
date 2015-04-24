@@ -1,29 +1,23 @@
 <?php
-	require_once("/../php/model/config.php");
-?>
-<div id="login-form" class="container">
-	<div class="row">
-		<div class="col-xs-12">
-			<h1>Login</h1>
-		</div>	
+    require_once(__DIR__ . "/../model/config.php");
+
+ ?>
+
+ <h1>Login</h1>
+
+ <form method="post" action="<?php echo $path . "controller/login-user.php"; ?>"> 	
+      <div>
+		<label for="username">Username: </label>
+		<input type="text" name="username" />
 	</div>
-	<form method="post" action="<?php echo "/../php/controller/login-user.php"?>">
-		<div class="row">
-			<div id="login-username" class="col-xs-12">
-				<label for="username">Username: </label> <!-- Label for people to input their username -->
-				<input type="text" name="username" />
-			</div>
-		</div>
-		<div class="row">	
-			<div id="login-password" class="col-xs-12">
-				<label for="password">Password: </label> <!-- Label for people to input their password -->
-				<input type="password" name="password" />
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12">
-				<button type="submit" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off"> Submit </button> <!-- submits the information on the page -->
-			</div>
-		</div>	
-	</form>
-</div>
+
+	<div>
+		<label for="password">Password: </label>
+		<input type="password" name="password" />
+	</div>
+
+	<div>
+		<button type="submit">Submit:</button>
+	</div>
+ </form>
+
