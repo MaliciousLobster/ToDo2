@@ -5,6 +5,11 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css"/>
 </head>
 <body>
+	<?php
+	require_once("/php/controller/login-verify.php"); //takes code from login-verify.php
+	require_once("/view/navigation.php"); //takes code from nagivation.php
+	require_once("/php/controller/create-db.php"); //takes all the code from create-db.php and puts it here
+	?>
 	<div class="task-list">
 			<ul>
 				<?php require("includes/connect.php"); 

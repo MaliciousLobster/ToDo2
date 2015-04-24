@@ -8,7 +8,7 @@
 			. $mysqli->connect_error);
 	}
 	else{
-		echo "connection made";
+		
 	}
 	
 	$mysqli->close();
